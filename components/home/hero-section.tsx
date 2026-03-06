@@ -6,12 +6,11 @@ import { ArrowRight, Sparkles, Star } from 'lucide-react'
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Grid Pattern Background */}
-      <div className="absolute inset-0 grid-pattern opacity-30" />
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden wavy-checker">
+      {/* Wavy Checkerboard Background - rendered via CSS ::before */}
       
       {/* Floating decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
         <motion.div
           animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
@@ -42,7 +41,7 @@ export function HeroSection() {
         </motion.div>
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Badge */}
           <motion.div

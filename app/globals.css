@@ -1,0 +1,185 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* Y2K Neubrutalism Theme - Cosas de Iri */
+:root {
+  /* Core Y2K Palette */
+  --cyan: #3fbfe2;
+  --yellow: #edda07;
+  --lime: #c6e4a8;
+  
+  /* Neubrutalism System */
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #3fbfe2;
+  --primary-foreground: #000000;
+  --secondary: #edda07;
+  --secondary-foreground: #000000;
+  --muted: #f5f5f5;
+  --muted-foreground: #333333;
+  --accent: #c6e4a8;
+  --accent-foreground: #000000;
+  --destructive: #ff3333;
+  --destructive-foreground: #000000;
+  --border: #000000;
+  --input: #000000;
+  --ring: #3fbfe2;
+  
+  /* Neubrutalism specifics */
+  --brutal-shadow: 4px 4px 0px #000000;
+  --brutal-shadow-hover: 6px 6px 0px #000000;
+  --brutal-border: 3px solid #000000;
+  --radius: 0;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --card: #0a0a0a;
+  --card-foreground: #ffffff;
+  --popover: #0a0a0a;
+  --popover-foreground: #ffffff;
+  --primary: #3fbfe2;
+  --primary-foreground: #000000;
+  --secondary: #edda07;
+  --secondary-foreground: #000000;
+  --muted: #1a1a1a;
+  --muted-foreground: #cccccc;
+  --accent: #c6e4a8;
+  --accent-foreground: #000000;
+  --destructive: #ff3333;
+  --destructive-foreground: #000000;
+  --border: #ffffff;
+  --input: #ffffff;
+  --ring: #3fbfe2;
+  
+  --brutal-shadow: 4px 4px 0px #ffffff;
+  --brutal-shadow-hover: 6px 6px 0px #ffffff;
+  --brutal-border: 3px solid #ffffff;
+}
+
+@theme inline {
+  --font-sans: 'Space Grotesk', 'Space Grotesk Fallback', sans-serif;
+  --font-mono: 'Space Mono', 'Space Mono Fallback', monospace;
+  --font-display: 'Anybody', 'Anybody Fallback', sans-serif;
+  
+  --color-cyan: var(--cyan);
+  --color-yellow: var(--yellow);
+  --color-lime: var(--lime);
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    border-radius: 0 !important;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  /* Neubrutalism utility classes */
+  .brutal-border {
+    border: var(--brutal-border);
+  }
+  
+  .brutal-shadow {
+    box-shadow: var(--brutal-shadow);
+  }
+  
+  .brutal-shadow-hover {
+    transition: box-shadow 0.15s ease-out, transform 0.15s ease-out;
+  }
+  
+  .brutal-shadow-hover:hover {
+    box-shadow: var(--brutal-shadow-hover);
+    transform: translate(-2px, -2px);
+  }
+  
+  /* Y2K Grid Pattern */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(to right, var(--border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  
+  /* Marquee animation */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+  
+  /* Blink animation */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  .animate-blink {
+    animation: blink 1.5s ease-in-out infinite;
+  }
+  
+  /* Pop animation for hover */
+  .pop-hover {
+    transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  .pop-hover:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Windows 98 frame effect */
+  .win98-frame {
+    border: 3px solid;
+    border-color: var(--foreground);
+    position: relative;
+  }
+  
+  .win98-frame::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: linear-gradient(90deg, var(--cyan) 0%, var(--lime) 100%);
+    border: 3px solid var(--foreground);
+    border-bottom: none;
+  }
+}

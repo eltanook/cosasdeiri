@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { RefreshCw, AlertTriangle, CheckCircle2, XCircle, MessageCircle } from 'lucide-react'
+import { RefreshCw, AlertTriangle, CheckCircle2, XCircle } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
 import Link from 'next/link'
 
 const acceptedReasons = [
@@ -56,7 +57,7 @@ export function DevolucionesContent() {
               </span>
               <h2 className="font-display text-2xl font-bold">Nuestra Política</h2>
             </div>
-            
+
             <div className="space-y-4 font-mono text-sm leading-relaxed">
               <p>
                 Tenés <strong className="text-primary">7 días corridos</strong> desde que recibís tu alfombra para solicitar un cambio o devolución.
@@ -121,7 +122,7 @@ export function DevolucionesContent() {
             className="brutal-border brutal-shadow bg-muted p-6 sm:p-8"
           >
             <h3 className="font-display text-xl font-bold mb-6">¿Cómo hacer un cambio o devolución?</h3>
-            
+
             <div className="grid sm:grid-cols-4 gap-4">
               {[
                 { step: '1', title: 'Contactanos', desc: 'Escribinos por WhatsApp o email' },
@@ -175,7 +176,7 @@ export function DevolucionesContent() {
               href="/contacto"
               className="brutal-border inline-flex items-center gap-2 bg-background px-6 py-3 font-mono font-bold text-foreground"
             >
-              <MessageCircle className="h-5 w-5" />
+              <FaWhatsapp className="h-5 w-5" />
               Contactanos
             </Link>
           </motion.div>

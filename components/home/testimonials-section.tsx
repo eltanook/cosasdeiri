@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react'
 import { testimonials } from '@/lib/products'
@@ -79,13 +78,8 @@ export function TestimonialsSection() {
                   <div className="flex flex-col sm:flex-row gap-6">
                     {/* Avatar */}
                     <div className="shrink-0">
-                      <div className="brutal-border relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden bg-muted mx-auto sm:mx-0">
-                        <Image
-                          src={testimonials[current].image}
-                          alt={testimonials[current].name}
-                          fill
-                          className="object-cover"
-                        />
+                      <div className="brutal-border bg-primary h-20 w-20 sm:h-24 sm:w-24 flex items-center justify-center mx-auto sm:mx-0">
+                        <Quote className="h-10 w-10 text-primary-foreground" />
                       </div>
                     </div>
 
@@ -103,8 +97,7 @@ export function TestimonialsSection() {
 
                       {/* Quote */}
                       <div className="relative">
-                        <Quote className="absolute -left-2 -top-2 h-6 w-6 text-primary opacity-50" />
-                        <p className="font-mono text-lg leading-relaxed pl-6">
+                        <p className="font-mono text-lg leading-relaxed">
                           {testimonials[current].text}
                         </p>
                       </div>
@@ -146,9 +139,8 @@ export function TestimonialsSection() {
                     setDirection(i > current ? 1 : -1)
                     setCurrent(i)
                   }}
-                  className={`brutal-border h-3 w-3 transition-colors ${
-                    i === current ? 'bg-primary' : 'bg-muted'
-                  }`}
+                  className={`brutal-border h-3 w-3 transition-colors ${i === current ? 'bg-primary' : 'bg-muted'
+                    }`}
                   aria-label={`Go to testimonial ${i + 1}`}
                 />
               ))}

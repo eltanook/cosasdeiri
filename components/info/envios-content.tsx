@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Truck, CreditCard, Clock, MapPin, Package, Shield, CheckCircle2 } from 'lucide-react'
+import { Truck, CreditCard, Clock, MapPin, Package, Shield, Landmark, Banknote } from 'lucide-react'
 
 const shippingZones = [
   { zone: 'CABA', time: '1-3 días hábiles', cost: 'Gratis en compras +$40.000' },
@@ -11,9 +11,9 @@ const shippingZones = [
 ]
 
 const paymentMethods = [
-  { name: 'Transferencia Bancaria', description: '10% de descuento', icon: '🏦' },
-  { name: 'Mercado Pago', description: 'Hasta 12 cuotas', icon: '💳' },
-  { name: 'Efectivo', description: 'Solo CABA y GBA', icon: '💵' },
+  { name: 'Transferencia Bancaria', description: '10% de descuento', icon: Landmark },
+  { name: 'Mercado Pago', description: 'Hasta 12 cuotas', icon: CreditCard },
+  { name: 'Efectivo', description: 'Solo CABA y GBA', icon: Banknote },
 ]
 
 export function EnviosContent() {
@@ -63,9 +63,8 @@ export function EnviosContent() {
               {shippingZones.map((zone, i) => (
                 <div
                   key={zone.zone}
-                  className={`grid grid-cols-4 p-4 font-mono text-sm ${
-                    i % 2 === 0 ? 'bg-card' : 'bg-muted'
-                  }`}
+                  className={`grid grid-cols-4 p-4 font-mono text-sm ${i % 2 === 0 ? 'bg-card' : 'bg-muted'
+                    }`}
                 >
                   <span className="font-bold">{zone.zone}</span>
                   <span className="text-muted-foreground">{zone.time}</span>
@@ -118,7 +117,9 @@ export function EnviosContent() {
                   key={method.name}
                   className="brutal-border brutal-shadow bg-card p-6"
                 >
-                  <span className="text-4xl mb-4 block">{method.icon}</span>
+                  <div className="brutal-border bg-muted p-3 inline-block mb-4">
+                    <method.icon className="h-6 w-6 text-primary" />
+                  </div>
                   <h3 className="font-display text-lg font-bold mb-1">{method.name}</h3>
                   <p className="font-mono text-sm text-primary font-bold">{method.description}</p>
                 </div>
@@ -162,7 +163,7 @@ export function EnviosContent() {
                   Garantía de Satisfacción
                 </h3>
                 <p className="font-mono text-sm text-primary-foreground/80">
-                  Si tu alfombra llega con algún defecto, te la cambiamos sin vueltas. 
+                  Si tu alfombra llega con algún defecto, te la cambiamos sin vueltas.
                   Tu felicidad es nuestra prioridad.
                 </p>
               </div>

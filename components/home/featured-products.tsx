@@ -62,16 +62,16 @@ export function FeaturedProducts() {
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
-                  
+
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
+                  <div className="absolute inset-0 bg-foreground/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
                     <Link href={`/tienda/${product.slug}`}>
                       <motion.span
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        className="brutal-border bg-background p-3"
+                        className="brutal-border bg-background p-4 flex items-center justify-center"
                       >
-                        <Eye className="h-5 w-5" />
+                        <Eye className="h-6 w-6 text-foreground" />
                       </motion.span>
                     </Link>
                     <motion.button
@@ -86,9 +86,9 @@ export function FeaturedProducts() {
                           size: product.sizes[0].label,
                         })
                       }
-                      className="brutal-border bg-primary p-3"
+                      className="brutal-border bg-primary p-4 flex items-center justify-center"
                     >
-                      <ShoppingCart className="h-5 w-5 text-primary-foreground" />
+                      <ShoppingCart className="h-6 w-6 text-primary-foreground" />
                     </motion.button>
                   </div>
 

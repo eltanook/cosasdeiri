@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Search, SlidersHorizontal, X, Grid, LayoutGrid } from 'lucide-react'
 import { products, categories } from '@/lib/products'
@@ -9,11 +10,18 @@ import { FilterSidebar } from './filter-sidebar'
 import { FilterDrawer } from './filter-drawer'
 
 export function ShopContent() {
+  const searchParams = useSearchParams()
   const [searchQuery, setSearchQuery] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [selectedCategory, setSelectedCategory] = useState(() => searchParams.get('category') ?? 'all')
   const [sortBy, setSortBy] = useState<'price-asc' | 'price-desc' | 'name'>('name')
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   const [gridSize, setGridSize] = useState<'small' | 'large'>('large')
+
+  // Sync category when URL param changes (e.g. browser back/forward)
+  useEffect(() => {
+    const cat = searchParams.get('category')
+    if (cat) setSelectedCategory(cat)
+  }, [searchParams])
 
   const filteredProducts = useMemo(() => {
     let filtered = [...products]
@@ -219,11 +227,10 @@ export function ShopContent() {
               </motion.div>
             ) : (
               <div
-                className={`grid gap-6 ${
-                  gridSize === 'large'
+                className={`grid gap-6 ${gridSize === 'large'
                     ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
                     : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'
-                }`}
+                  }`}
               >
                 <AnimatePresence mode="popLayout">
                   {filteredProducts.map((product, index) => (

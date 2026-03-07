@@ -3,6 +3,7 @@ import { Space_Grotesk, Space_Mono, Anybody } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
 import { Analytics } from '@vercel/analytics/next'
 import { Toaster } from 'sonner'
+import { WhatsAppFloat } from '@/components/whatsapp-float'
 import './globals.css'
 
 const spaceGrotesk = Space_Grotesk({
@@ -26,14 +27,14 @@ const anybody = Anybody({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Cosas de Iri | Alfombras de Diseno Y2K Argentina',
+    default: 'Cosas de Iri | Alfombras de Diseno Unicas en Argentina',
     template: '%s | Cosas de Iri',
   },
   description:
-    'Ponele onda a tus espacios con alfombras de diseno unicas. Decoracion Y2K, alfombras personalizadas hechas a mano en Argentina. Estilos retro y contemporaneos.',
+    'Ponele onda a tus espacios con alfombras de diseno unicas. Decoracion original, alfombras personalizadas hechas a mano en Argentina. Estilos retro y contemporaneos.',
   keywords: [
     'alfombras de diseno',
-    'decoracion Y2K',
+    'decoracion original',
     'alfombras personalizadas Argentina',
     'alfombras hechas a mano',
     'decoracion retro',
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     locale: 'es_AR',
     url: 'https://cosasdeiri.com',
     siteName: 'Cosas de Iri',
-    title: 'Cosas de Iri | Alfombras de Diseno Y2K',
+    title: 'Cosas de Iri | Alfombras de Diseno',
     description:
       'Ponele onda a tus espacios con alfombras de diseno unicas y personalizadas.',
     images: [
@@ -56,13 +57,13 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Cosas de Iri - Alfombras de Diseno Y2K',
+        alt: 'Cosas de Iri - Alfombras de Diseno',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cosas de Iri | Alfombras de Diseno Y2K',
+    title: 'Cosas de Iri | Alfombras de Diseno',
     description: 'Ponele onda a tus espacios con alfombras de diseno unicas.',
     images: ['/og-image.jpg'],
   },
@@ -98,6 +99,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <WhatsAppFloat />
           <Toaster
             position="bottom-right"
             toastOptions={{

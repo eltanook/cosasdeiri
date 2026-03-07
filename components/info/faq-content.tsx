@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Plus, Minus, Sparkles, MessageCircle } from 'lucide-react'
+import { Plus, Minus, Sparkles } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
 import Link from 'next/link'
 
 const faqs = [
@@ -80,7 +81,7 @@ export function FAQContent() {
   const [openItems, setOpenItems] = useState<string[]>([])
 
   const toggleItem = (id: string) => {
-    setOpenItems(prev => 
+    setOpenItems(prev =>
       prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]
     )
   }
@@ -120,12 +121,12 @@ export function FAQContent() {
               <h2 className="brutal-border inline-block bg-accent px-3 py-1 font-mono text-sm font-bold uppercase text-accent-foreground mb-4">
                 {category.category}
               </h2>
-              
+
               <div className="space-y-3">
                 {category.items.map((item, itemIndex) => {
                   const itemId = `${catIndex}-${itemIndex}`
                   const isOpen = openItems.includes(itemId)
-                  
+
                   return (
                     <div
                       key={itemId}
@@ -146,7 +147,7 @@ export function FAQContent() {
                           )}
                         </span>
                       </button>
-                      
+
                       <AnimatePresence>
                         {isOpen && (
                           <motion.div
@@ -192,7 +193,7 @@ export function FAQContent() {
             href="/contacto"
             className="brutal-border inline-flex items-center gap-2 bg-background px-6 py-3 font-mono font-bold text-foreground"
           >
-            <MessageCircle className="h-5 w-5" />
+            <FaWhatsapp className="h-5 w-5" />
             Contactanos
           </Link>
         </motion.div>

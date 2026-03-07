@@ -3,9 +3,9 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { toast } from 'sonner'
-import { 
-  Send, 
-  Sparkles, 
+import {
+  Send,
+  Sparkles,
   MessageCircle,
   Instagram,
   Mail,
@@ -13,6 +13,7 @@ import {
   Star,
   Heart
 } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
 
 const requestTypes = [
   { id: 'personalizada', label: 'Alfombra personalizada', icon: Sparkles },
@@ -109,11 +110,10 @@ export function ContactContent() {
                         onClick={() =>
                           setFormData((prev) => ({ ...prev, type: type.id }))
                         }
-                        className={`brutal-border flex items-center gap-2 px-4 py-3 font-mono text-sm font-bold transition-colors ${
-                          isSelected
+                        className={`brutal-border flex items-center gap-2 px-4 py-3 font-mono text-sm font-bold transition-colors ${isSelected
                             ? 'bg-primary text-primary-foreground'
                             : 'bg-muted hover:bg-accent'
-                        }`}
+                          }`}
                       >
                         <Icon className="h-4 w-4" />
                         {type.label}
@@ -140,11 +140,10 @@ export function ContactContent() {
                   onChange={handleChange}
                   onFocus={() => setFocusedField('name')}
                   onBlur={() => setFocusedField(null)}
-                  className={`w-full brutal-border bg-background px-4 py-3 font-mono transition-colors ${
-                    focusedField === 'name'
+                  className={`w-full brutal-border bg-background px-4 py-3 font-mono transition-colors ${focusedField === 'name'
                       ? 'border-primary ring-2 ring-primary ring-offset-2'
                       : ''
-                  }`}
+                    }`}
                   placeholder="Como te llamas?"
                 />
               </div>
@@ -166,11 +165,10 @@ export function ContactContent() {
                   onChange={handleChange}
                   onFocus={() => setFocusedField('email')}
                   onBlur={() => setFocusedField(null)}
-                  className={`w-full brutal-border bg-background px-4 py-3 font-mono transition-colors ${
-                    focusedField === 'email'
+                  className={`w-full brutal-border bg-background px-4 py-3 font-mono transition-colors ${focusedField === 'email'
                       ? 'border-primary ring-2 ring-primary ring-offset-2'
                       : ''
-                  }`}
+                    }`}
                   placeholder="tu@email.com"
                 />
               </div>
@@ -191,11 +189,10 @@ export function ContactContent() {
                   onChange={handleChange}
                   onFocus={() => setFocusedField('phone')}
                   onBlur={() => setFocusedField(null)}
-                  className={`w-full brutal-border bg-background px-4 py-3 font-mono transition-colors ${
-                    focusedField === 'phone'
+                  className={`w-full brutal-border bg-background px-4 py-3 font-mono transition-colors ${focusedField === 'phone'
                       ? 'border-primary ring-2 ring-primary ring-offset-2'
                       : ''
-                  }`}
+                    }`}
                   placeholder="+54 11 1234 5678"
                 />
               </div>
@@ -217,11 +214,10 @@ export function ContactContent() {
                   onChange={handleChange}
                   onFocus={() => setFocusedField('message')}
                   onBlur={() => setFocusedField(null)}
-                  className={`w-full brutal-border bg-background px-4 py-3 font-mono resize-none transition-colors ${
-                    focusedField === 'message'
+                  className={`w-full brutal-border bg-background px-4 py-3 font-mono resize-none transition-colors ${focusedField === 'message'
                       ? 'border-primary ring-2 ring-primary ring-offset-2'
                       : ''
-                  }`}
+                    }`}
                   placeholder="Contanos tu idea, consulta o lo que necesites..."
                 />
               </div>
@@ -271,7 +267,7 @@ export function ContactContent() {
                 className="brutal-border brutal-shadow bg-lime p-4 flex items-center gap-3"
               >
                 <div className="brutal-border bg-background p-3">
-                  <MessageCircle className="h-6 w-6" />
+                  <FaWhatsapp className="h-6 w-6" />
                 </div>
                 <div>
                   <p className="font-mono text-xs text-black/70">WhatsApp</p>
@@ -351,7 +347,7 @@ export function ContactContent() {
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210200.95476063844!2d-58.59847219999999!3d-34.6158527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20Argentina!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus"
                   width="100%"
                   height="100%"
-                  style={{ 
+                  style={{
                     border: 0,
                     filter: 'grayscale(100%) contrast(1.2)',
                   }}
@@ -376,12 +372,6 @@ export function ContactContent() {
                   <p className="font-bold">Cuanto tarda una alfombra personalizada?</p>
                   <p className="text-muted-foreground">
                     Entre 2 y 4 semanas dependiendo del diseno.
-                  </p>
-                </div>
-                <div>
-                  <p className="font-bold">Hacen envios a todo el pais?</p>
-                  <p className="text-muted-foreground">
-                    Si! Enviamos a toda Argentina.
                   </p>
                 </div>
                 <div>

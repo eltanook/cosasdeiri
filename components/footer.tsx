@@ -47,7 +47,7 @@ export function Footer() {
               </span>
             </motion.div>
             <p className="font-mono text-sm leading-relaxed text-muted-foreground max-w-xs">
-              Ponele onda a tus espacios con alfombras únicas hechas a mano en Argentina. 
+              Ponele onda a tus espacios con alfombras únicas hechas a mano en Argentina.
               Diseños que cuentan historias.
             </p>
             <div className="flex items-center gap-1 font-mono text-xs">

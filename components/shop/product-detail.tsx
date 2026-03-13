@@ -134,7 +134,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                   ${currentSize.price.toLocaleString('es-AR')}
                 </span>
                 <span className="font-mono text-sm text-primary-foreground/80">
-                  Tamanio {currentSize.label}
+                  Tamaño {currentSize.label}
                 </span>
               </div>
             </div>
@@ -142,7 +142,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
             {/* Size Selector */}
             <div>
               <h3 className="brutal-border inline-block bg-secondary px-3 py-1 font-mono text-sm font-bold uppercase text-secondary-foreground mb-4">
-                Tamanio
+                Tamaño
               </h3>
               <div className="flex flex-wrap gap-3">
                 {product.sizes.map((size, index) => (

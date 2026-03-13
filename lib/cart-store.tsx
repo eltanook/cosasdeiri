@@ -25,7 +25,7 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined)
 
-const WHATSAPP_NUMBER = '5491112345678' // Replace with actual number
+const WHATSAPP_NUMBER = '5491157246994' // Replace with actual number
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([])

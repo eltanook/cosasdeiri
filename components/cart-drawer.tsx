@@ -95,7 +95,7 @@ export function CartDrawer({ open, onClose }: CartDrawerProps) {
                             </h3>
                             {item.size && (
                               <p className="font-mono text-xs text-muted-foreground">
-                                Tamanio: {item.size}
+                                Tamaño: {item.size}
                               </p>
                             )}
                             <p className="font-mono text-sm font-bold text-primary">

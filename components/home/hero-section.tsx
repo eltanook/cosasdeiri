@@ -90,7 +90,7 @@ export function HeroSection() {
             className="inline-block mb-6"
           >
             <div className="brutal-border brutal-shadow bg-secondary px-4 py-2 font-mono text-sm font-bold uppercase text-secondary-foreground inline-block">
-              Alfombras de diseno unicas en Argentina
+              Alfombras de diseño unicas en Argentina
             </div>
           </motion.div>
 
@@ -118,8 +118,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-8 font-mono text-lg sm:text-xl max-w-2xl mx-auto text-muted-foreground"
           >
-            Alfombras hechas a mano con mucho amor. Disenos retro, contemporaneos y
-            totalmente personalizados. Porque tu piso merece algo diferente.
+            Alfombras hechas a mano, con mucho amor. Diseños personalizados que se adaptan a vos, desde lo retro hasta lo contemporáneo, para que tus espacios sean únicos como vos.
           </motion.p>
 
           {/* CTA Buttons */}

@@ -20,13 +20,10 @@ export function UserGallery() {
             User Generated Content
           </span>
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black">
-            MURO DE LA{' '}
-            <span className="brutal-border inline-block bg-primary px-3 text-primary-foreground">
-              FAMA
-            </span>
+            Hall of fame
           </h1>
           <p className="mt-4 font-mono text-lg text-muted-foreground max-w-xl mx-auto">
-            Espacios con onda gracias a ustedes. Mira como nuestros clientes le dan vida a sus lugares.
+            Gracias a ustedes, cada espacio cobra vida. Descubrí nuestra comunidad e inspírate con sus fotos.
           </p>
         </motion.div>
 

@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   }
 
   return {
-    title: `${product.name} | Alfombra de Diseno`,
+    title: `${product.name} | Alfombra de Diseño`,
     description: product.description,
     openGraph: {
       title: `${product.name} | Cosas de Iri`,

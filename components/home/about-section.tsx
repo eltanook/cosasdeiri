@@ -34,21 +34,14 @@ export function AboutSection() {
 
             <div className="space-y-4 font-mono text-lg leading-relaxed text-muted-foreground">
               <p>
-                Arranque haciendo alfombras en plena pandemia, cuando el mundo 
-                parecia que se caia a pedazos. Encontre en esto una forma de 
-                expresarme y de llenar los espacios con buena onda.
+                Hola, soy Iri. Me dedico al cine de animación, y lo que más me emociona es la posibilidad de dar vida a lo que imagino, transformar ideas en algo visible y real. Con las alfombras, encontré esa misma pasión: la posibilidad de hacer tangible lo que uno imagina, y tenerlo en tu espacio cada día.
               </p>
               <p>
-                Cada alfombra que hago es unica. Las diseno, las tufto a mano y 
-                les pongo todo el amor del mundo. No son solo alfombras, son 
-                <span className="brutal-border mx-1 inline-block bg-accent px-1 text-accent-foreground">
-                  pedazos de arte
-                </span>
-                para tu piso.
+                Cada alfombra que hago es única. Aunque el diseño se pueda repetir, cada paso se dibuja, se crea, se recorta y se pega a mano. Es un trabajo artesanal. No son solo alfombras, son arte, para poner en tu piso o en tu pared. 
               </p>
               <p className="flex items-center gap-2">
                 <Heart className="h-5 w-5 fill-destructive text-destructive" />
-                Y si tenes una idea loca, la hacemos realidad juntos.
+                Si tenés una idea loca, la hacemos realidad juntos.
               </p>
             </div>
 

@@ -16,37 +16,37 @@ import {
 
 const timeline = [
   {
-    year: '2020',
-    title: 'El comienzo',
-    description: 'En plena pandemia, Iri descubre el tufting. Lo que empezo como un hobby se convirtio en pasion.',
+    year: '2021',
+    title: 'Descubrimiento',
+    description: 'Descubrimiento de la técnica tufting a través de videos de YouTube e investigación sobre esta técnica.',
     icon: Zap,
     color: 'bg-primary',
   },
   {
-    year: '2021',
-    title: 'Primeras ventas',
-    description: 'Las primeras alfombras salen al mundo. Amigos, familia y despues... desconocidos que se volvieron amigos.',
+    year: '2022',
+    title: 'Decisión',
+    description: 'Me decido a comprar las máquinas y herramientas necesarias, dando el primer paso.',
     icon: Heart,
     color: 'bg-secondary',
   },
   {
-    year: '2022',
-    title: 'Cosas de Iri nace',
-    description: 'La marca toma forma. Identidad visual, redes sociales y un proposito claro: ponele onda a tus espacios.',
+    year: '2023-2024',
+    title: 'Formación',
+    description: 'En estos años decido perfeccionar mis habilidades, tomando clases de dibujo, arte y explorando nuevas técnicas.',
     icon: Sparkles,
     color: 'bg-accent',
   },
   {
-    year: '2023',
-    title: 'Comunidad',
-    description: '+500 clientes felices. Cada alfombra cuenta una historia. Cada espacio tiene su onda unica.',
+    year: '2025',
+    title: 'Creación',
+    description: 'Acá nacen y comienzan a tomar forma las primeras alfombras, materializando mis ideas.',
     icon: Users,
     color: 'bg-lime',
   },
   {
-    year: '2024',
-    title: 'El futuro',
-    description: 'Nuevos disenos, nuevos materiales, nuevas formas de crear. La aventura sigue...',
+    year: '2026',
+    title: 'Expansión',
+    description: 'Hoy, cada alfombra que hago lleva un poco de esta magia, cuidada en cada detalle y siempre con la misma pasión. Siempre en constante aprendizaje y mejora.',
     icon: Star,
     color: 'bg-primary',
   },
@@ -56,22 +56,17 @@ const values = [
   {
     icon: Palette,
     title: 'Creatividad',
-    description: 'Cada alfombra es una obra de arte. No seguimos tendencias, las creamos.',
+    description: 'Cada alfombra es una obra de arte. Podés encontrar diseños que ya existen o podemos inventar juntos, ya sea a partir de mis ideas o de las tuyas',
   },
   {
     icon: Heart,
     title: 'Amor',
-    description: 'Hacemos las cosas con el corazon. Se nota en cada puntada.',
-  },
-  {
-    icon: Package,
-    title: 'Calidad',
-    description: 'Materiales premium y atencion al detalle. Tu alfombra dura para siempre.',
+    description: 'Hacemos las cosas con el corazón, se nota en cada puntada.',
   },
   {
     icon: Users,
     title: 'Comunidad',
-    description: 'Somos mas que una marca. Somos un grupo de gente con onda.',
+    description: 'Somos más que una marca, somos un grupo de personas con onda, conectadas por la creatividad y el gusto por lo único.',
   },
 ]
 
@@ -126,18 +121,14 @@ export function AboutStory() {
             
             <div className="space-y-4 font-mono text-muted-foreground leading-relaxed">
               <p>
-                Todo empezo en 2020, cuando el mundo se puso raro y yo necesitaba 
-                algo para no volverme loca. Descubri el tufting por casualidad 
-                viendo videos en internet y dije <span className="brutal-border bg-secondary px-1 text-secondary-foreground">"por que no?"</span>
+                Hola, soy Iri. 
+                Siempre me apasionó el arte, dibujo desde chica y hoy me dedico al cine de animación. Es increíble poder pasar una idea de mi mente a una pantalla, dándole vida a lo invisible.
               </p>
               <p>
-                Mi primera alfombra fue horrible (en serio, horrible). Pero habia 
-                algo magico en el proceso. Ver como la lana iba formando disenos, 
-                como algo abstracto se convertia en algo tangible...
+                Por eso, cuando descubrí las alfombras, sentí que podía llevar esa magia aún más lejos. Acá, lo que imaginamos se transforma en algo tangible, y cada alfombra lleva un pedacito de esto que va más allá de lo visible.
               </p>
               <p>
-                Hoy, cada alfombra que hago lleva un pedacito de esa magia inicial. 
-                La misma emocion, pero con mas tecnica y menos desastres.
+                Hoy, cada alfombra que hago lleva un poco de esa magia, cuidada en cada detalle y siempre con la misma pasión
               </p>
             </div>
 
@@ -267,7 +258,7 @@ export function AboutStory() {
             </span>
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {values.map((value, index) => {
               const Icon = value.icon
               return (

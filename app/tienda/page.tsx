@@ -5,12 +5,12 @@ import { ShopContent } from '@/components/shop/shop-content'
 import { CartProvider } from '@/lib/cart-store'
 
 export const metadata: Metadata = {
-  title: 'Tienda | Alfombras de Diseno',
+  title: 'Tienda | Alfombras de Diseño',
   description:
-    'Explora nuestra coleccion de alfombras de diseno unicas. Estilos abstractos, geometricos, retro Y2K y personalizados. Hechas a mano en Argentina.',
+    'Explora nuestra coleccion de alfombras de diseño unicas. Estilos abstractos, geometricos, retro Y2K y personalizados. Hechas a mano en Argentina.',
   openGraph: {
     title: 'Tienda | Cosas de Iri',
-    description: 'Alfombras de diseno unicas hechas a mano.',
+    description: 'Alfombras de diseño unicas hechas a mano.',
     images: ['/og-tienda.jpg'],
   },
 }

@@ -84,7 +84,7 @@ export function ContactContent() {
           >
             <form
               onSubmit={handleSubmit}
-              action="https://formsubmit.co/hola@cosasdeiri.com"
+              action="https://formsubmit.co/irinamena98@gmail.com"
               method="POST"
               className="brutal-border brutal-shadow bg-card p-6 md:p-8"
             >
@@ -193,7 +193,7 @@ export function ContactContent() {
                       ? 'border-primary ring-2 ring-primary ring-offset-2'
                       : ''
                     }`}
-                  placeholder="+54 11 1234 5678"
+                  placeholder="+54 9 11 5724-6994"
                 />
               </div>
 
@@ -260,7 +260,7 @@ export function ContactContent() {
             {/* Contact Info Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <motion.a
-                href="https://wa.me/5491112345678"
+                href="https://wa.me/5491157246994"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
@@ -272,13 +272,13 @@ export function ContactContent() {
                 <div>
                   <p className="font-mono text-xs text-black/70">WhatsApp</p>
                   <p className="font-display font-bold text-black">
-                    +54 11 1234 5678
+                    +54 9 11 5724-6994
                   </p>
                 </div>
               </motion.a>
 
               <motion.a
-                href="mailto:hola@cosasdeiri.com"
+                href="mailto:irinamena98@gmail.com"
                 whileHover={{ scale: 1.02 }}
                 className="brutal-border brutal-shadow bg-secondary p-4 flex items-center gap-3"
               >
@@ -290,13 +290,13 @@ export function ContactContent() {
                     Email
                   </p>
                   <p className="font-display font-bold text-secondary-foreground">
-                    hola@cosasdeiri.com
+                    irinamena98@gmail.com
                   </p>
                 </div>
               </motion.a>
 
               <motion.a
-                href="https://instagram.com/cosasdeiri"
+                href="https://www.instagram.com/cosasdeiri/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
@@ -369,15 +369,27 @@ export function ContactContent() {
               </h3>
               <div className="space-y-3 font-mono text-sm">
                 <div>
-                  <p className="font-bold">Cuanto tarda una alfombra personalizada?</p>
+                  <p className="font-bold">¿Cuánto tarda una alfombra personalizada?</p>
                   <p className="text-muted-foreground">
-                    Entre 2 y 4 semanas dependiendo del diseno.
+                    Entre 2 y 4 semanas, dependiendo del diseño. Sin embargo, este tiempo puede variar según la disponibilidad y la complejidad del diseño, pudiendo ser más rápido o algo más extenso.
                   </p>
                 </div>
                 <div>
-                  <p className="font-bold">Puedo elegir los colores?</p>
+                  <p className="font-bold">¿Hacen envíos a todo el país?</p>
                   <p className="text-muted-foreground">
-                    Obvio! Personalizamos todo a tu gusto.
+                    Sí, enviamos a todo Argentina.
+                  </p>
+                </div>
+                <div>
+                  <p className="font-bold">¿Puedo elegir los colores? y el tamaño?</p>
+                  <p className="text-muted-foreground">
+                    ¡Claro! Personalizamos a tu gusto, podés elegir los colores que quieras y las medidas que imagines.
+                  </p>
+                </div>
+                <div>
+                  <p className="font-bold">¿Las alfombras son lavables?</p>
+                  <p className="text-muted-foreground">
+                    Sí, se pueden limpiar con cuidado en casa. No se pueden meter en el lavarropas. Son lavables a mano, y si querés que te duren más, deberías seguir nuestra guía de limpieza
                   </p>
                 </div>
               </div>

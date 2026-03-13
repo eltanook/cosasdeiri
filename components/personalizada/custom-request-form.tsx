@@ -47,15 +47,15 @@ export function CustomRequestForm() {
 *Telefono:* ${formData.phone}
 
 *Forma:* ${shapes.find(s => s.id === formData.shape)?.name || 'No especificado'}
-*Tamano:* ${sizes.find(s => s.id === formData.size)?.name || 'No especificado'} ${formData.customSize ? `(${formData.customSize})` : ''}
+*Tamaño:* ${sizes.find(s => s.id === formData.size)?.name || 'No especificado'} ${formData.customSize ? `(${formData.customSize})` : ''}
 *Colores:* ${formData.colors || 'No especificado'}
-*Diseno/Idea:* ${formData.design || 'No especificado'}
+*Diseño/Idea:* ${formData.design || 'No especificado'}
 *Referencia:* ${formData.reference || 'Sin referencia'}
 *Presupuesto:* ${formData.budget || 'A definir'}
 
 Gracias!`
 
-    const whatsappUrl = `https://wa.me/5491100000000?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/5491157246994?text=${encodeURIComponent(message)}`
     
     setTimeout(() => {
       setIsSubmitting(false)
@@ -87,8 +87,8 @@ Gracias!`
           </h1>
 
           <p className="text-lg md:text-xl max-w-2xl mx-auto text-muted-foreground">
-            Contanos tu idea y la hacemos realidad. Elegis forma, tamano, colores y diseno.
-            Cada alfombra es unica como vos.
+            Contanos tu idea y la hacemos realidad. Elegís forma, tamaño, colores y diseño.
+            Cada alfombra es única como vos.
           </p>
         </motion.div>
 
@@ -198,7 +198,7 @@ Gracias!`
           <div className="bg-card brutal-border brutal-shadow p-6 md:p-8 mb-8">
             <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
               <Ruler className="w-6 h-6 text-primary" />
-              TAMANO
+              TAMAÑO
             </h2>
 
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
@@ -244,7 +244,7 @@ Gracias!`
           <div className="bg-card brutal-border brutal-shadow p-6 md:p-8 mb-8">
             <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
               <Palette className="w-6 h-6 text-primary" />
-              DISENO
+              DISEÑO
             </h2>
 
             <div className="space-y-4">
@@ -263,7 +263,7 @@ Gracias!`
 
               <div>
                 <label className="block font-mono text-sm font-bold mb-2 uppercase">
-                  Contanos tu idea / diseno *
+                  Contanos tu idea / diseño *
                 </label>
                 <textarea
                   required

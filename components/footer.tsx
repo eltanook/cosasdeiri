@@ -16,18 +16,14 @@ const footerLinks = {
   info: [
     { label: 'Sobre Nosotros', href: '/nosotros' },
     { label: 'Galería de Clientes', href: '/ustedes' },
-    { label: 'Preguntas Frecuentes', href: '/faq' },
-    { label: 'Envíos y Pagos', href: '/envios' },
-    { label: 'Devoluciones', href: '/devoluciones' },
     { label: 'Cuidados', href: '/cuidados' },
     { label: 'Contacto', href: '/contacto' },
   ],
 }
 
 const socialLinks = [
-  { label: 'Instagram', href: 'https://instagram.com/cosasdeiri', icon: FaInstagram },
-  { label: 'TikTok', href: 'https://tiktok.com/@cosasdeiri', icon: FaTiktok },
-  { label: 'WhatsApp', href: 'https://wa.me/5491123456789', icon: FaWhatsapp },
+  { label: 'Instagram', href: 'https://www.instagram.com/cosasdeiri/', icon: FaInstagram },
+  { label: 'WhatsApp', href: 'https://wa.me/5491157246994', icon: FaWhatsapp },
 ]
 
 export function Footer() {
@@ -48,7 +44,6 @@ export function Footer() {
             </motion.div>
             <p className="font-mono text-sm leading-relaxed text-muted-foreground max-w-xs">
               Ponele onda a tus espacios con alfombras únicas hechas a mano en Argentina.
-              Diseños que cuentan historias.
             </p>
             <div className="flex items-center gap-1 font-mono text-xs">
               <Star className="h-4 w-4 fill-secondary text-secondary" />
@@ -128,7 +123,7 @@ export function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                hola@cosasdeiri.com
+                irinamena98@gmail.com
               </p>
             </div>
           </div>

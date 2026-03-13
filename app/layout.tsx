@@ -27,13 +27,13 @@ const anybody = Anybody({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Cosas de Iri | Alfombras de Diseno Unicas en Argentina',
+    default: 'Cosas de Iri | Alfombras de Diseño Unicas en Argentina',
     template: '%s | Cosas de Iri',
   },
   description:
-    'Ponele onda a tus espacios con alfombras de diseno unicas. Decoracion original, alfombras personalizadas hechas a mano en Argentina. Estilos retro y contemporaneos.',
+    'Ponele onda a tus espacios con alfombras de diseño únicas. Decoración original, alfombras personalizadas hechas a mano en Argentina. Estilos retro y contemporáneos.',
   keywords: [
-    'alfombras de diseno',
+    'alfombras de diseño',
     'decoracion original',
     'alfombras personalizadas Argentina',
     'alfombras hechas a mano',
@@ -49,27 +49,30 @@ export const metadata: Metadata = {
     locale: 'es_AR',
     url: 'https://cosasdeiri.com',
     siteName: 'Cosas de Iri',
-    title: 'Cosas de Iri | Alfombras de Diseno',
+    title: 'Cosas de Iri | Alfombras de Diseño',
     description:
-      'Ponele onda a tus espacios con alfombras de diseno unicas y personalizadas.',
+      'Ponele onda a tus espacios con alfombras de diseño unicas y personalizadas.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Cosas de Iri - Alfombras de Diseno',
+        alt: 'Cosas de Iri - Alfombras de Diseño',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cosas de Iri | Alfombras de Diseno',
-    description: 'Ponele onda a tus espacios con alfombras de diseno unicas.',
+    title: 'Cosas de Iri | Alfombras de Diseño',
+    description: 'Ponele onda a tus espacios con alfombras de diseño unicas.',
     images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
     follow: true,
+  },
+  icons: {
+    icon: '/favicon.png',
   },
 }
 

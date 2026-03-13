@@ -116,7 +116,7 @@ export function FeaturedProducts() {
                       ${product.price.toLocaleString('es-AR')}
                     </span>
                     <span className="brutal-border bg-muted px-2 py-1 font-mono text-xs">
-                      {product.sizes.length} tamanios
+                      {product.sizes.length} tamaños
                     </span>
                   </div>
                 </div>

@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
@@ -21,7 +22,13 @@ export default function TiendaPage() {
       <div className="flex min-h-screen flex-col">
         <Navbar />
         <main className="flex-1">
-          <ShopContent />
+          <Suspense fallback={
+            <div className="flex h-[50vh] items-center justify-center font-mono text-muted-foreground">
+              Cargando tienda...
+            </div>
+          }>
+            <ShopContent />
+          </Suspense>
         </main>
         <Footer />
       </div>

@@ -4,12 +4,12 @@ import { useState, useMemo, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Search, SlidersHorizontal, X, Grid, LayoutGrid } from 'lucide-react'
-import { products, categories } from '@/lib/products'
+import { categories, type Product } from '@/lib/products'
 import { ProductCard } from './product-card'
 import { FilterSidebar } from './filter-sidebar'
 import { FilterDrawer } from './filter-drawer'
 
-export function ShopContent() {
+export function ShopContent({ initialProducts }: { initialProducts: Product[] }) {
   const searchParams = useSearchParams()
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState(() => searchParams.get('category') ?? 'all')
@@ -24,7 +24,7 @@ export function ShopContent() {
   }, [searchParams])
 
   const filteredProducts = useMemo(() => {
-    let filtered = [...products]
+    let filtered = [...initialProducts]
 
     // Filter by search
     if (searchQuery) {

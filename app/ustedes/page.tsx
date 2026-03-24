@@ -3,6 +3,7 @@ import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { UserGallery } from '@/components/ustedes/user-gallery'
 import { CartProvider } from '@/lib/cart-store'
+import { getUserGallery } from '@/lib/products'
 
 export const metadata: Metadata = {
   title: 'Ustedes | Galeria de Clientes',
@@ -15,13 +16,15 @@ export const metadata: Metadata = {
   },
 }
 
-export default function UstedesPage() {
+export default async function UstedesPage() {
+  const gallery = await getUserGallery()
+  
   return (
     <CartProvider>
       <div className="flex min-h-screen flex-col">
         <Navbar />
         <main className="flex-1">
-          <UserGallery />
+          <UserGallery initialGallery={gallery} />
         </main>
         <Footer />
       </div>

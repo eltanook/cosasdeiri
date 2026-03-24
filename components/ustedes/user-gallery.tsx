@@ -4,9 +4,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Camera, Heart, Star, FolderOpen, ArrowRight, Instagram } from 'lucide-react'
-import { userGallery } from '@/lib/products'
 
-export function UserGallery() {
+interface GalleryItem {
+  id: string
+  image: string
+  name: string
+  product: string
+}
+
+export function UserGallery({ initialGallery }: { initialGallery: GalleryItem[] }) {
   return (
     <div className="py-12 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -52,7 +58,7 @@ export function UserGallery() {
           {/* Toolbar */}
           <div className="brutal-border border-x-0 border-t-0 bg-muted px-4 py-2 flex items-center gap-4">
             <span className="font-mono text-xs text-muted-foreground">
-              {userGallery.length} archivos
+              {initialGallery.length} archivos
             </span>
             <span className="font-mono text-xs text-muted-foreground">|</span>
             <span className="font-mono text-xs text-muted-foreground flex items-center gap-1">
@@ -64,7 +70,7 @@ export function UserGallery() {
           {/* Asymmetric Grid - Collage Style */}
           <div className="p-4 md:p-6">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-              {userGallery.map((item, index) => {
+              {initialGallery.map((item, index) => {
                 // Create asymmetric layout
                 const isLarge = index === 0 || index === 4
                 const isRotated = index % 3 === 0

@@ -4,6 +4,7 @@ import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { ShopContent } from '@/components/shop/shop-content'
 import { CartProvider } from '@/lib/cart-store'
+import { getProducts } from '@/lib/products'
 
 export const metadata: Metadata = {
   title: 'Tienda | Alfombras de Diseño',
@@ -16,7 +17,9 @@ export const metadata: Metadata = {
   },
 }
 
-export default function TiendaPage() {
+export default async function TiendaPage() {
+  const products = await getProducts()
+  
   return (
     <CartProvider>
       <div className="flex min-h-screen flex-col">
@@ -27,7 +30,7 @@ export default function TiendaPage() {
               Cargando tienda...
             </div>
           }>
-            <ShopContent />
+            <ShopContent initialProducts={products} />
           </Suspense>
         </main>
         <Footer />

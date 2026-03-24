@@ -1,0 +1,230 @@
+﻿
+> my-project@0.1.0 build
+> next build
+
+Ôû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+node.exe : 
+En C:\Program Files\nodejs\npm.ps1: 29 Carácter: 3
++   & $NODE_EXE $NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], Rem 
+   oteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+> Build error occurred
+Error: Turbopack build failed with 4 errors:
+./app/studio/[[...index]]/page.tsx:4:1
+Module not found: Can't resolve '../../../../sanity.config'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { [33mNextStudio[39m } 
+[36mfrom[39m [32m'next-sanity/studio'[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m config 
+[36mfrom[39m [32m'../../../../sanity.config'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22
+m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m 
+[36mfunction[39m [33mStudioPage[39m() {
+ [90m 7 |[39m   [36mreturn[39m 
+[33m<[39m[33mNextStudio[39m config[33m=[39m{config} 
+[33m/[39m[33m>[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/studio/[[...index]]/page.tsx [Client Component 
+Browser]
+    ./app/studio/[[...index]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/studio/[[...index]]/page.tsx [Client Component SSR]
+    ./app/studio/[[...index]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./sanity/lib/image.ts:1:1
+Module not found: Can't resolve '@sanity/image-url'
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m 
+createImageUrlBuilder [36mfrom[39m 
+[32m'@sanity/image-url'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m
+ [90m 2 |[39m [36mimport[39m type { [33mImage[39m } 
+[36mfrom[39m [32m'sanity'[39m
+ [90m 3 |[39m
+ [90m 4 |[39m [36mimport[39m { dataset[33m,[39m 
+projectId } [36mfrom[39m [32m'../env'[39m[0m
+
+
+
+Import traces:
+  Server Component:
+    ./sanity/lib/image.ts
+    ./lib/products.ts
+    ./app/page.tsx
+
+  Client Component Browser:
+    ./sanity/lib/image.ts [Client Component Browser]
+    ./lib/products.ts [Client Component Browser]
+    ./components/home/testimonials-section.tsx [Client 
+Component Browser]
+    ./components/home/testimonials-section.tsx [Server 
+Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity/lib/image.ts [Client Component SSR]
+    ./lib/products.ts [Client Component SSR]
+    ./components/home/testimonials-section.tsx [Client 
+Component SSR]
+    ./components/home/testimonials-section.tsx [Server 
+Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./sanity/lib/client.ts:1:1
+Module not found: Can't resolve 'next-sanity'
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m { 
+createClient } [36mfrom[39m [32m'next-sanity'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { apiVersion[33m,[39m 
+dataset[33m,[39m projectId[33m,[39m useCdn } 
+[36mfrom[39m [32m'../env'[39m
+ [90m 4 |[39m[0m
+
+
+
+Import traces:
+  Server Component:
+    ./sanity/lib/client.ts
+    ./lib/products.ts
+    ./app/page.tsx
+
+  Client Component Browser:
+    ./sanity/lib/client.ts [Client Component Browser]
+    ./lib/products.ts [Client Component Browser]
+    ./components/home/testimonials-section.tsx [Client 
+Component Browser]
+    ./components/home/testimonials-section.tsx [Server 
+Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./sanity/lib/client.ts [Client Component SSR]
+    ./lib/products.ts [Client Component SSR]
+    ./components/home/testimonials-section.tsx [Client 
+Component SSR]
+    ./components/home/testimonials-section.tsx [Server 
+Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./app/studio/[[...index]]/page.tsx:3:1
+Module not found: Can't resolve 'next-sanity/studio'
+[0m [90m 1 |[39m [32m'use client'[39m
+ [90m 2 |[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { 
+[33mNextStudio[39m } [36mfrom[39m 
+[32m'next-sanity/studio'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m
+[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[3
+9m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[
+31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31
+m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m
+[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1
+m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^
+[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[
+22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22
+m[39m[31m[1m^[22m[39m
+ [90m 4 |[39m [36mimport[39m config [36mfrom[39m 
+[32m'../../../../sanity.config'[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mexport[39m [36mdefault[39m 
+[36mfunction[39m [33mStudioPage[39m() {[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/studio/[[...index]]/page.tsx [Client Component 
+Browser]
+    ./app/studio/[[...index]]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/studio/[[...index]]/page.tsx [Client Component SSR]
+    ./app/studio/[[...index]]/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./app/studio/[[...index]]/page.tsx:4:1)
+    at <unknown> 
+(https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./sanity/lib/image.ts:1:1)
+    at <unknown> 
+(https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./sanity/lib/client.ts:1:1)
+    at <unknown> 
+(https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./app/studio/[[...index]]/page.tsx:3:1)
+    at <unknown> 
+(https://nextjs.org/docs/messages/module-not-found)

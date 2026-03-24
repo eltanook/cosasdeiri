@@ -1,15 +1,15 @@
 'use client'
 
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, Eye, ShoppingCart, Star } from 'lucide-react'
-import { products } from '@/lib/products'
+import { type Product } from '@/lib/products'
 import { useCart } from '@/lib/cart-store'
 
-export function FeaturedProducts() {
+export function FeaturedProducts({ featuredProducts }: { featuredProducts: Product[] }) {
   const { addItem } = useCart()
-  const featuredProducts = products.filter((p) => p.featured).slice(0, 4)
 
   return (
     <section className="py-20 md:py-32">

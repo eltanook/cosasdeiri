@@ -4,7 +4,7 @@ import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { ProductDetail } from '@/components/shop/product-detail'
 import { CartProvider } from '@/lib/cart-store'
-import { products } from '@/lib/products'
+import { getProducts } from '@/lib/products'
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>
@@ -12,7 +12,8 @@ interface ProductPageProps {
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params
-  const product = products.find((p) => p.slug === slug)
+  const allProducts = await getProducts()
+  const product = allProducts.find((p) => p.slug === slug)
 
   if (!product) {
     return {
@@ -32,14 +33,16 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 }
 
 export async function generateStaticParams() {
-  return products.map((product) => ({
+  const allProducts = await getProducts()
+  return allProducts.map((product) => ({
     slug: product.slug,
   }))
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params
-  const product = products.find((p) => p.slug === slug)
+  const allProducts = await getProducts()
+  const product = allProducts.find((p) => p.slug === slug)
 
   if (!product) {
     notFound()

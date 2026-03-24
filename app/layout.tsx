@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_AR',
-    url: 'https://cosasdeiri.com',
+    url: 'https://cosas-de-iri.vercel.app',
     siteName: 'Cosas de Iri',
     title: 'Cosas de Iri | Alfombras de Diseño',
     description:

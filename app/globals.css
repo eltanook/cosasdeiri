@@ -115,12 +115,12 @@
 
   body {
     @apply bg-background text-foreground;
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
   }
 
   html {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   /* Neubrutalism utility classes */

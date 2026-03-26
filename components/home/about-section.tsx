@@ -7,7 +7,7 @@ import { ArrowRight, Heart, Sparkles, Star } from 'lucide-react'
 
 export function AboutSection() {
   return (
-    <section className="py-20 md:py-32">
+    <section className="py-20 md:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 items-center">
           {/* Text Column */}

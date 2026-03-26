@@ -7,13 +7,18 @@ import { CartProvider } from '@/lib/cart-store'
 import { getProducts } from '@/lib/products'
 
 export const metadata: Metadata = {
-  title: 'Tienda | Alfombras de Diseño',
+  title: 'Tienda | Alfombras de Diseño hechas a mano',
   description:
-    'Explora nuestra coleccion de alfombras de diseño unicas. Estilos abstractos, geometricos, retro Y2K y personalizados. Hechas a mano en Argentina.',
+    'Explora nuestra colección de alfombras de diseño únicas. Estilos abstractos, geométricos, retro Y2K y personajes. Hechas a mano en Argentina con técnica de tufting.',
+  keywords: ['tienda alfombras', 'comprar alfombras diseño', 'alfombras tufting argentina', 'decoracion de interiores'],
+  alternates: {
+    canonical: 'https://cosasdeiri.com/tienda',
+  },
   openGraph: {
     title: 'Tienda | Cosas de Iri',
-    description: 'Alfombras de diseño unicas hechas a mano.',
+    description: 'Alfombras de diseño únicas hechas a mano mediante tufting.',
     images: ['/og-tienda.jpg'],
+    url: 'https://cosasdeiri.com/tienda',
   },
 }
 

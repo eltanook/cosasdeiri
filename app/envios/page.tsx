@@ -6,8 +6,11 @@ import { EnviosContent } from '@/components/info/envios-content'
 import { CartProvider } from '@/lib/cart-store'
 
 export const metadata: Metadata = {
-  title: 'Envíos y Pagos',
-  description: 'Información sobre envíos a todo Argentina, métodos de pago y tiempos de entrega. Cosas de Iri.',
+  title: 'Envíos y Pagos | Información Detallada',
+  description: 'Información sobre envíos a todo Argentina, métodos de pago, cuotas y tiempos de producción de nuestras alfombras artesanales.',
+  alternates: {
+    canonical: 'https://cosasdeiri.com/envios',
+  },
 }
 
 export default function EnviosPage() {

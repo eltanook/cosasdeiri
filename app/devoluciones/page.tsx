@@ -6,8 +6,11 @@ import { DevolucionesContent } from '@/components/info/devoluciones-content'
 import { CartProvider } from '@/lib/cart-store'
 
 export const metadata: Metadata = {
-  title: 'Devoluciones y Cambios',
-  description: 'Política de devoluciones y cambios de alfombras. Tu satisfacción es nuestra prioridad. Cosas de Iri.',
+  title: 'Devoluciones y Cambios | Políticas de Compra',
+  description: 'Conocé nuestras políticas de devoluciones y cambios. Tu satisfacción y la calidad de nuestras alfombras son nuestra prioridad.',
+  alternates: {
+    canonical: 'https://cosasdeiri.com/devoluciones',
+  },
 }
 
 export default function DevolucionesPage() {

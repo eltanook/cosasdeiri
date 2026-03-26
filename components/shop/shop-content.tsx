@@ -76,7 +76,7 @@ export function ShopContent({ initialProducts }: { initialProducts: Product[] })
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-black">
+            <h1 className="font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-black">
               NUESTRA{' '}
               <span className="brutal-border inline-block bg-primary px-3 text-primary-foreground">
                 TIENDA

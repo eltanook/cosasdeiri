@@ -33,9 +33,9 @@ export function FilterSidebar({
     <div className="sticky top-24 space-y-6">
       {/* Categories */}
       <div className="brutal-border brutal-shadow bg-card p-4">
-        <h3 className="brutal-border inline-block bg-secondary px-3 py-1 font-mono text-sm font-bold uppercase text-secondary-foreground mb-4">
+        <h2 className="brutal-border inline-block bg-secondary px-3 py-1 font-mono text-sm font-bold uppercase text-secondary-foreground mb-4">
           Categorias
-        </h3>
+        </h2>
         <div className="space-y-2">
           {categories.map((category) => {
             const Icon = iconMap[category.icon] || Grid

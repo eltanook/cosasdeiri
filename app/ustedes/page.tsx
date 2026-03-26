@@ -6,13 +6,17 @@ import { CartProvider } from '@/lib/cart-store'
 import { getUserGallery } from '@/lib/products'
 
 export const metadata: Metadata = {
-  title: 'Ustedes | Galeria de Clientes',
+  title: 'Ustedes | Galería de Clientes',
   description:
-    'Mira como nuestros clientes le dan onda a sus espacios con alfombras de Cosas de Iri. Galeria de fotos y testimonios reales.',
+    'Mirá cómo nuestros clientes decoran sus espacios con las alfombras de Cosas de Iri. Inspirate con fotos reales y testimonios de nuestra comunidad.',
+  alternates: {
+    canonical: 'https://cosasdeiri.com/ustedes',
+  },
   openGraph: {
-    title: 'Galeria de Clientes | Cosas de Iri',
-    description: 'Espacios con onda gracias a nuestras alfombras.',
+    title: 'Galería de Clientes | Cosas de Iri',
+    description: 'Espacios con mucha onda. Mirá cómo quedan nuestras alfombras en casas reales.',
     images: ['/og-ustedes.jpg'],
+    url: 'https://cosasdeiri.com/ustedes',
   },
 }
 

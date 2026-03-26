@@ -42,8 +42,8 @@ export function Navbar() {
     <>
       <nav className="brutal-border border-x-0 border-t-0 bg-background sticky top-0 z-50">
         {/* Marquee Banner */}
-        <div className="bg-secondary overflow-hidden py-1">
-          <div className="animate-marquee flex whitespace-nowrap">
+        <div className="bg-secondary overflow-x-hidden py-1 w-full relative">
+          <div className="animate-marquee flex whitespace-nowrap min-w-max">
             {[...Array(4)].map((_, setIndex) => (
               marqueeMessages.map((message, i) => (
                 <span key={`${setIndex}-${i}`} className="mx-8 font-mono text-sm text-secondary-foreground">

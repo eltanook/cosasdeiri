@@ -7,11 +7,15 @@ import { CartProvider } from '@/lib/cart-store'
 export const metadata: Metadata = {
   title: 'Nosotros | Nuestra Historia',
   description:
-    'Conoce la historia detras de Cosas de Iri. Como nacio esta pasion por crear alfombras unicas hechas a mano en Argentina.',
+    'Conocé la historia detrás de Cosas de Iri. De un hobby en pandemia a crear alfombras de diseño únicas hechas a mano con técnica de tufting en Argentina.',
+  alternates: {
+    canonical: 'https://cosasdeiri.com/nosotros',
+  },
   openGraph: {
     title: 'Nuestra Historia | Cosas de Iri',
-    description: 'De la pandemia a tu piso. Conoce como nacio Cosas de Iri.',
+    description: 'De la pandemia a tu piso. Conocé cómo nació la pasión por el tufting en Cosas de Iri.',
     images: ['/og-nosotros.jpg'],
+    url: 'https://cosasdeiri.com/nosotros',
   },
 }
 

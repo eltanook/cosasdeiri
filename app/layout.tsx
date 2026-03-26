@@ -26,32 +26,38 @@ const anybody = Anybody({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://cosasdeiri.com'),
   title: {
-    default: 'Cosas de Iri | Alfombras de Diseño Unicas en Argentina',
+    default: 'Cosas de Iri | Alfombras de Diseño hechas a mano',
     template: '%s | Cosas de Iri',
   },
   description:
-    'Ponele onda a tus espacios con alfombras de diseño únicas. Decoración original, alfombras personalizadas hechas a mano en Argentina. Estilos retro y contemporáneos.',
+    'Viste tus pisos con alfombras de diseño únicas y personalizadas. Alfombras hechas a mano con técnica de tufting en Argentina. Estilos retro, Y2K, abstractos y personalizados.',
   keywords: [
     'alfombras de diseño',
+    'tufting argentina',
     'decoracion original',
-    'alfombras personalizadas Argentina',
+    'alfombras personalizadas',
     'alfombras hechas a mano',
     'decoracion retro',
     'Cosas de Iri',
     'alfombras creativas',
     'home decor Argentina',
+    'handmade rugs argentina',
   ],
   authors: [{ name: 'Cosas de Iri' }],
   creator: 'Cosas de Iri',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'es_AR',
-    url: 'https://cosas-de-iri.vercel.app',
+    url: 'https://cosasdeiri.com',
     siteName: 'Cosas de Iri',
-    title: 'Cosas de Iri | Alfombras de Diseño',
+    title: 'Cosas de Iri | Alfombras de Diseño Unicas',
     description:
-      'Ponele onda a tus espacios con alfombras de diseño unicas y personalizadas.',
+      'Transformá tus espacios con alfombras de diseño hechas a mano. Diseños exclusivos y personalizados con técnica de tufting.',
     images: [
       {
         url: '/og-image.jpg',
@@ -64,12 +70,19 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Cosas de Iri | Alfombras de Diseño',
-    description: 'Ponele onda a tus espacios con alfombras de diseño unicas.',
+    description: 'Alfombras de diseño únicas hechas a mano en Argentina.',
     images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   icons: {
     icon: '/favicon.png',
@@ -90,8 +103,44 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Cosas de Iri',
+      url: 'https://cosasdeiri.com',
+      logo: 'https://cosasdeiri.com/favicon.png',
+      description: 'Alfombras de diseño únicas hechas a mano en Argentina mediante técnica de tufting.',
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'AR',
+      },
+      sameAs: [
+        'https://www.instagram.com/cosasdeiri',
+        'https://www.tiktok.com/@cosasdeiri',
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Cosas de Iri',
+      url: 'https://cosasdeiri.com',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://cosasdeiri.com/tienda?search={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+    },
+  ]
+
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${spaceGrotesk.variable} ${spaceMono.variable} ${anybody.variable} font-sans antialiased`}
       >

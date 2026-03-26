@@ -7,11 +7,15 @@ import { CartProvider } from '@/lib/cart-store'
 export const metadata: Metadata = {
   title: 'Contacto | Alfombras Personalizadas',
   description:
-    'Contactanos para hacer tu alfombra personalizada. Diseños unicos hechos a mano en Argentina. Pedidos especiales y consultas.',
+    'Contactanos para encargar tu alfombra personalizada. Diseños únicos hechos a mano en Argentina. Pedidos especiales, ventas mayoristas y consultas generales.',
+  alternates: {
+    canonical: 'https://cosasdeiri.com/contacto',
+  },
   openGraph: {
     title: 'Contacto | Cosas de Iri',
-    description: 'Hagamos tu alfombra soñada realidad.',
+    description: 'Hagamos tu alfombra soñada realidad. ¡Escribinos!',
     images: ['/og-contacto.jpg'],
+    url: 'https://cosasdeiri.com/contacto',
   },
 }
 

@@ -36,12 +36,12 @@ export function ProductCard({ product, compact = false }: ProductCardProps) {
           alt={`Alfombra ${product.name} - Diseño ${product.category}`}
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-110"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 280px"
         />
 
         {/* Hover Overlay con botones mejorados */}
         <div className="absolute inset-0 bg-foreground/70 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center gap-4">
-          <Link href={`/tienda/${product.slug}`}>
+          <Link href={`/tienda/${product.slug}`} aria-label={`Ver detalles de ${product.name}`}>
             <motion.span
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -54,6 +54,7 @@ export function ProductCard({ product, compact = false }: ProductCardProps) {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handleAddToCart}
+            aria-label={`Añadir ${product.name} al carrito`}
             className="brutal-border bg-primary p-4 flex items-center justify-center"
           >
             <ShoppingCart className="h-6 w-6 text-primary-foreground" />

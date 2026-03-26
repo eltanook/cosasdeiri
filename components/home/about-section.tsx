@@ -95,8 +95,9 @@ export function AboutSection() {
                   src="/about-iri.jpg"
                   alt="Iri trabajando en una alfombra artesanal"
                   fill
+                  priority
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 570px"
                 />
                 {/* Overlay stickers */}
                 <motion.div

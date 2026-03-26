@@ -102,6 +102,7 @@ export function ShopContent({ initialProducts }: { initialProducts: Product[] })
               <input
                 type="text"
                 placeholder="Buscar alfombras..."
+                aria-label="Buscar alfombras"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full brutal-border bg-background pl-10 pr-4 py-3 font-mono text-sm placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:ring-offset-2"
@@ -109,6 +110,7 @@ export function ShopContent({ initialProducts }: { initialProducts: Product[] })
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
+                  aria-label="Limpiar búsqueda"
                   className="absolute right-3 top-1/2 -translate-y-1/2"
                 >
                   <X className="h-4 w-4 text-muted-foreground" />
@@ -131,12 +133,14 @@ export function ShopContent({ initialProducts }: { initialProducts: Product[] })
             <div className="hidden md:flex brutal-border bg-background">
               <button
                 onClick={() => setGridSize('large')}
+                aria-label="Ver cuadrícula grande"
                 className={`p-3 ${gridSize === 'large' ? 'bg-primary text-primary-foreground' : ''}`}
               >
                 <Grid className="h-5 w-5" />
               </button>
               <button
                 onClick={() => setGridSize('small')}
+                aria-label="Ver cuadrícula pequeña"
                 className={`p-3 ${gridSize === 'small' ? 'bg-primary text-primary-foreground' : ''}`}
               >
                 <LayoutGrid className="h-5 w-5" />

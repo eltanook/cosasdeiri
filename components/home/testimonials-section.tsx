@@ -139,8 +139,8 @@ export function TestimonialsSection() {
                     setDirection(i > current ? 1 : -1)
                     setCurrent(i)
                   }}
-                  className={`brutal-border h-3 w-3 transition-colors ${i === current ? 'bg-primary' : 'bg-muted'
-                    }`}
+                  className={`brutal-border h-3 w-3 transition-colors relative ${i === current ? 'bg-primary' : 'bg-muted'
+                    } after:content-[''] after:absolute after:-inset-4 after:z-10`}
                   aria-label={`Go to testimonial ${i + 1}`}
                 />
               ))}

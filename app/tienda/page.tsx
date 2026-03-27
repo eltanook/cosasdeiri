@@ -4,7 +4,7 @@ import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { ShopContent } from '@/components/shop/shop-content'
 import { CartProvider } from '@/lib/cart-store'
-import { getProducts } from '@/lib/products'
+import { getProducts, getCategories } from '@/lib/products'
 
 export const metadata: Metadata = {
   title: 'Tienda | Alfombras de Diseño hechas a mano',
@@ -23,23 +23,24 @@ export const metadata: Metadata = {
 }
 
 export default async function TiendaPage() {
-  const products = await getProducts()
+  const [products, categories] = await Promise.all([
+    getProducts(),
+    getCategories()
+  ])
   
   return (
-    <CartProvider>
-      <div className="flex min-h-screen flex-col">
-        <Navbar />
-        <main className="flex-1">
-          <Suspense fallback={
-            <div className="flex h-[50vh] items-center justify-center font-mono text-muted-foreground">
-              Cargando tienda...
-            </div>
-          }>
-            <ShopContent initialProducts={products} />
-          </Suspense>
-        </main>
-        <Footer />
-      </div>
-    </CartProvider>
+    <div className="flex min-h-screen flex-col">
+      <Navbar />
+      <main className="flex-1">
+        <Suspense fallback={
+          <div className="flex h-[50vh] items-center justify-center font-mono text-muted-foreground">
+            Cargando tienda...
+          </div>
+        }>
+          <ShopContent initialProducts={products} initialCategories={categories} />
+        </Suspense>
+      </main>
+      <Footer />
+    </div>
   )
 }

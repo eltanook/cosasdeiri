@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState, useCallback, type ReactNode } from 'react'
+import { createContext, useContext, useState, useCallback, useEffect, type ReactNode } from 'react'
 import { toast } from 'sonner'
 
 export interface CartItem {
@@ -29,6 +29,27 @@ const WHATSAPP_NUMBER = '5491157246994' // Replace with actual number
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([])
+  const [isInitialized, setIsInitialized] = useState(false)
+
+  // Load from localStorage on mount
+  useEffect(() => {
+    const savedCart = localStorage.getItem('cosas-de-iri-cart')
+    if (savedCart) {
+      try {
+        setItems(JSON.parse(savedCart))
+      } catch (e) {
+        console.error('Failed to load cart from localStorage', e)
+      }
+    }
+    setIsInitialized(true)
+  }, [])
+
+  // Save to localStorage when items change
+  useEffect(() => {
+    if (isInitialized) {
+      localStorage.setItem('cosas-de-iri-cart', JSON.stringify(items))
+    }
+  }, [items, isInitialized])
 
   const addItem = useCallback((item: Omit<CartItem, 'quantity'>) => {
     setItems((prev) => {

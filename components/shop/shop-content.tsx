@@ -4,12 +4,18 @@ import { useState, useMemo, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Search, SlidersHorizontal, X, Grid, LayoutGrid } from 'lucide-react'
-import { categories, type Product } from '@/lib/products'
+import { type Product, type Category } from '@/lib/products'
 import { ProductCard } from './product-card'
 import { FilterSidebar } from './filter-sidebar'
 import { FilterDrawer } from './filter-drawer'
 
-export function ShopContent({ initialProducts }: { initialProducts: Product[] }) {
+export function ShopContent({ 
+  initialProducts, 
+  initialCategories 
+}: { 
+  initialProducts: Product[];
+  initialCategories: Category[];
+}) {
   const searchParams = useSearchParams()
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState(() => searchParams.get('category') ?? 'all')
@@ -165,7 +171,7 @@ export function ShopContent({ initialProducts }: { initialProducts: Product[] })
               <span className="font-mono text-xs text-muted-foreground">Filtros activos:</span>
               {selectedCategory !== 'all' && (
                 <span className="brutal-border bg-accent px-2 py-1 font-mono text-xs font-bold text-accent-foreground flex items-center gap-1">
-                  {categories.find((c) => c.id === selectedCategory)?.name}
+                  {initialCategories.find((c) => c.id === selectedCategory)?.name}
                   <button onClick={() => setSelectedCategory('all')}>
                     <X className="h-3 w-3" />
                   </button>
@@ -194,7 +200,7 @@ export function ShopContent({ initialProducts }: { initialProducts: Product[] })
           {/* Desktop Sidebar */}
           <div className="hidden md:block w-64 shrink-0">
             <FilterSidebar
-              categories={categories}
+              categories={initialCategories}
               selectedCategory={selectedCategory}
               onCategoryChange={setSelectedCategory}
             />
@@ -260,7 +266,7 @@ export function ShopContent({ initialProducts }: { initialProducts: Product[] })
       <FilterDrawer
         open={mobileFiltersOpen}
         onClose={() => setMobileFiltersOpen(false)}
-        categories={categories}
+        categories={initialCategories}
         selectedCategory={selectedCategory}
         onCategoryChange={setSelectedCategory}
       />

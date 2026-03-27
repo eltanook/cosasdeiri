@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { AboutStory } from '@/components/nosotros/about-story'
-import { CartProvider } from '@/lib/cart-store'
 
 export const metadata: Metadata = {
   title: 'Nosotros | Nuestra Historia',
@@ -21,14 +20,12 @@ export const metadata: Metadata = {
 
 export default function NosotrosPage() {
   return (
-    <CartProvider>
-      <div className="flex min-h-screen flex-col">
-        <Navbar />
-        <main className="flex-1">
-          <AboutStory />
-        </main>
-        <Footer />
-      </div>
-    </CartProvider>
+    <div className="flex min-h-screen flex-col">
+      <Navbar />
+      <main className="flex-1">
+        <AboutStory />
+      </main>
+      <Footer />
+    </div>
   )
 }

@@ -4,6 +4,7 @@ import { ThemeProvider } from 'next-themes'
 import { Analytics } from '@vercel/analytics/next'
 import { Toaster } from 'sonner'
 import { WhatsAppFloat } from '@/components/whatsapp-float'
+import { CartProvider } from '@/lib/cart-store'
 import './globals.css'
 
 const spaceGrotesk = Space_Grotesk({
@@ -151,8 +152,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <WhatsAppFloat />
+          <CartProvider>
+            {children}
+            <WhatsAppFloat />
+          </CartProvider>
           <Toaster
             position="bottom-right"
             toastOptions={{

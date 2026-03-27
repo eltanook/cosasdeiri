@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { CartProvider } from '@/lib/cart-store'
 import { CustomRequestForm } from '@/components/personalizada/custom-request-form'
 
 export const metadata: Metadata = {
@@ -21,14 +20,12 @@ export const metadata: Metadata = {
 
 export default function PersonalizadaPage() {
   return (
-    <CartProvider>
-      <div className="min-h-screen bg-background">
-        <Navbar />
-        <main>
-          <CustomRequestForm />
-        </main>
-        <Footer />
-      </div>
-    </CartProvider>
+    <div className="flex min-h-screen flex-col">
+      <Navbar />
+      <main className="flex-1">
+        <CustomRequestForm />
+      </main>
+      <Footer />
+    </div>
   )
 }

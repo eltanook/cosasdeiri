@@ -24,14 +24,12 @@ export default async function UstedesPage() {
   const gallery = await getUserGallery()
   
   return (
-    <CartProvider>
-      <div className="flex min-h-screen flex-col">
-        <Navbar />
-        <main className="flex-1">
-          <UserGallery initialGallery={gallery} />
-        </main>
-        <Footer />
-      </div>
-    </CartProvider>
+    <div className="flex min-h-screen flex-col">
+      <Navbar />
+      <main className="flex-1">
+        <UserGallery initialGallery={gallery} />
+      </main>
+      <Footer />
+    </div>
   )
 }

@@ -15,15 +15,13 @@ export const metadata: Metadata = {
 
 export default function EnviosPage() {
   return (
-    <CartProvider>
-      <div className="flex min-h-screen flex-col">
-        <Navbar />
-        <main className="flex-1">
-          <EnviosContent />
-        </main>
-        <Footer />
-        <WhatsAppFloat />
-      </div>
-    </CartProvider>
+    <div className="flex min-h-screen flex-col">
+      <Navbar />
+      <main className="flex-1">
+        <EnviosContent />
+      </main>
+      <Footer />
+      <WhatsAppFloat />
+    </div>
   )
 }

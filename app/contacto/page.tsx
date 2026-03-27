@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { ContactContent } from '@/components/contacto/contact-content'
-import { CartProvider } from '@/lib/cart-store'
 
 export const metadata: Metadata = {
   title: 'Contacto | Alfombras Personalizadas',
@@ -21,14 +20,12 @@ export const metadata: Metadata = {
 
 export default function ContactoPage() {
   return (
-    <CartProvider>
-      <div className="flex min-h-screen flex-col">
-        <Navbar />
-        <main className="flex-1">
-          <ContactContent />
-        </main>
-        <Footer />
-      </div>
-    </CartProvider>
+    <div className="flex min-h-screen flex-col">
+      <Navbar />
+      <main className="flex-1">
+        <ContactContent />
+      </main>
+      <Footer />
+    </div>
   )
 }

@@ -36,15 +36,8 @@ export const product = defineType({
     defineField({
       name: 'category',
       title: 'Categoría',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'Abstracto', value: 'abstracto' },
-          { title: 'Geométrico', value: 'geometrico' },
-          { title: 'Personajes', value: 'personajes' },
-          { title: 'Pokémon', value: 'pokemon' },
-        ],
-      },
+      type: 'reference',
+      to: [{ type: 'category' }],
       validation: (rule) => rule.required(),
     }),
     defineField({

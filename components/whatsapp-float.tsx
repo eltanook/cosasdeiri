@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { FaWhatsapp } from 'react-icons/fa'
 
-const WHATSAPP_NUMBER = '5491157246994' // Reemplazar con el numero real
+const WHATSAPP_NUMBER = '5491176329579' // Reemplazar con el numero real
 const WHATSAPP_MESSAGE = '¡Hola! Quiero consultar sobre las alfombras de Cosas de Iri'
 
 export function WhatsAppFloat() {

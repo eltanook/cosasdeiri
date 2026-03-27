@@ -23,7 +23,7 @@ const footerLinks = {
 
 const socialLinks = [
   { label: 'Instagram', href: 'https://www.instagram.com/cosasdeiri/', icon: FaInstagram },
-  { label: 'WhatsApp', href: 'https://wa.me/5491157246994', icon: FaWhatsapp },
+  { label: 'WhatsApp', href: 'https://wa.me/5491176329579', icon: FaWhatsapp },
 ]
 
 export function Footer() {
@@ -137,19 +137,29 @@ export function Footer() {
             <p className="font-mono text-xs text-background">
               © {new Date().getFullYear()} Cosas de Iri. Hecho con mucho amor en Argentina.
             </p>
-            <div className="flex items-center gap-4">
-              <Link
-                href="/privacidad"
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <a
+                href="https://zevetix.site"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-mono text-xs text-background/70 hover:text-background transition-colors"
               >
-                Privacidad
-              </Link>
-              <Link
-                href="/terminos"
-                className="font-mono text-xs text-background/70 hover:text-background transition-colors"
-              >
-                Términos
-              </Link>
+                Desarrollado y diseñado por <span className="underline">Zevetix</span>
+              </a>
+              <div className="flex items-center gap-4">
+                <Link
+                  href="/privacidad"
+                  className="font-mono text-xs text-background/70 hover:text-background transition-colors"
+                >
+                  Privacidad
+                </Link>
+                <Link
+                  href="/terminos"
+                  className="font-mono text-xs text-background/70 hover:text-background transition-colors"
+                >
+                  Términos
+                </Link>
+              </div>
             </div>
           </div>
         </div>

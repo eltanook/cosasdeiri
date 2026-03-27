@@ -55,7 +55,7 @@ export function CustomRequestForm() {
 
 Gracias!`
 
-    const whatsappUrl = `https://wa.me/5491157246994?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/5491176329579?text=${encodeURIComponent(message)}`
     
     setTimeout(() => {
       setIsSubmitting(false)

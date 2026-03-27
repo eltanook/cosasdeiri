@@ -193,7 +193,7 @@ export function ContactContent() {
                       ? 'border-primary ring-2 ring-primary ring-offset-2'
                       : ''
                     }`}
-                  placeholder="+54 9 11 5724-6994"
+                  placeholder="+54 9 11 7632-9579"
                 />
               </div>
 
@@ -260,7 +260,7 @@ export function ContactContent() {
             {/* Contact Info Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <motion.a
-                href="https://wa.me/5491157246994"
+                href="https://wa.me/5491176329579"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
@@ -272,7 +272,7 @@ export function ContactContent() {
                 <div>
                   <p className="font-mono text-xs text-black/70">WhatsApp</p>
                   <p className="font-display font-bold text-black">
-                    +54 9 11 5724-6994
+                    +54 9 11 7632-9579
                   </p>
                 </div>
               </motion.a>

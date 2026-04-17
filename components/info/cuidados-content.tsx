@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { AlertTriangle, Sparkles, Droplets, Heart } from 'lucide-react'
+import { AlertTriangle, Sparkles, Droplets, Heart, ShieldCheck, Shirt, Footprints, Layers, Leaf } from 'lucide-react'
 
 const careSteps = [
   {
@@ -66,6 +66,74 @@ export function CuidadosContent() {
             </motion.div>
           ))}
         </div>
+
+        {/* Materiales Premium */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="brutal-border brutal-shadow bg-secondary p-6 md:p-8 mb-12"
+        >
+          <div className="flex items-center justify-center gap-3 mb-6 md:mb-8">
+            <Sparkles className="h-6 w-6 text-secondary-foreground" />
+            <h2 className="font-display text-2xl md:text-3xl font-black text-secondary-foreground text-center">
+              MATERIALES PREMIUM
+            </h2>
+            <Sparkles className="h-6 w-6 text-secondary-foreground" />
+          </div>
+          
+          <div className="flex flex-col gap-4 max-w-xl mx-auto">
+            {/* Lana */}
+            <div className="brutal-border brutal-shadow-sm bg-card p-4 flex items-center gap-4 hover:-translate-y-1 transition-transform">
+              <div className="brutal-border bg-primary p-2 shrink-0">
+                <ShieldCheck className="h-5 w-5 text-primary-foreground" />
+              </div>
+              <span className="font-mono text-sm sm:text-base font-bold text-foreground">
+                Lana acrílica (apto alérgicos)
+              </span>
+            </div>
+
+            {/* Tela panama */}
+            <div className="brutal-border brutal-shadow-sm bg-card p-4 flex items-center gap-4 hover:-translate-y-1 transition-transform">
+              <div className="brutal-border bg-accent p-2 shrink-0">
+                <Shirt className="h-5 w-5 text-accent-foreground" />
+              </div>
+              <span className="font-mono text-sm sm:text-base font-bold text-foreground">
+                Tela panamá (100% algodón)
+              </span>
+            </div>
+
+            {/* Antideslizante */}
+            <div className="brutal-border brutal-shadow-sm bg-card p-4 flex items-center gap-4 hover:-translate-y-1 transition-transform">
+              <div className="brutal-border bg-lime p-2 shrink-0">
+                <Footprints className="h-5 w-5 text-black" />
+              </div>
+              <span className="font-mono text-sm sm:text-base font-bold text-foreground">
+                Tela antideslizante en alfombras
+              </span>
+            </div>
+
+            {/* Cuerina */}
+            <div className="brutal-border brutal-shadow-sm bg-card p-4 flex items-center gap-4 hover:-translate-y-1 transition-transform">
+              <div className="brutal-border bg-background p-2 shrink-0">
+                <Layers className="h-5 w-5 text-foreground" />
+              </div>
+              <span className="font-mono text-sm sm:text-base font-bold text-foreground">
+                Cuerina en tapices
+              </span>
+            </div>
+
+            {/* Adhesivo */}
+            <div className="brutal-border brutal-shadow-sm bg-card p-4 flex items-center gap-4 hover:-translate-y-1 transition-transform">
+              <div className="brutal-border bg-primary p-2 shrink-0">
+                <Leaf className="h-5 w-5 text-primary-foreground" />
+              </div>
+              <span className="font-mono text-sm sm:text-base font-bold text-foreground">
+                Adhesivo a base de agua (más seguros para el medio ambiente y para nosotros)
+              </span>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Love Note */}
         <motion.div

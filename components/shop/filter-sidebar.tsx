@@ -89,22 +89,26 @@ export function FilterSidebar({
         <h4 className="font-mono text-xs font-bold uppercase text-muted-foreground mb-3">
           Materiales Premium
         </h4>
-        <ul className="space-y-2 font-mono text-sm">
-          <li className="flex items-center gap-2">
-            <span className="h-2 w-2 bg-primary" />
-            Lana sintetica premium
+        <ul className="space-y-2 font-mono text-sm leading-snug">
+          <li className="flex items-start gap-2">
+            <span className="h-2 w-2 bg-primary mt-1 shrink-0" />
+            <span>Lana acrílica (apto alérgicos)</span>
           </li>
-          <li className="flex items-center gap-2">
-            <span className="h-2 w-2 bg-secondary" />
-            Algodon reciclado
+          <li className="flex items-start gap-2">
+            <span className="h-2 w-2 bg-secondary mt-1 shrink-0" />
+            <span>Tela panamá (100% algodón)</span>
           </li>
-          <li className="flex items-center gap-2">
-            <span className="h-2 w-2 bg-accent" />
-            Lana merino
+          <li className="flex items-start gap-2">
+            <span className="h-2 w-2 bg-accent mt-1 shrink-0" />
+            <span>Tela antideslizante en alfombras</span>
           </li>
-          <li className="flex items-center gap-2">
-            <span className="h-2 w-2 bg-lime" />
-            Poliester soft touch
+          <li className="flex items-start gap-2">
+            <span className="h-2 w-2 bg-lime mt-1 shrink-0" />
+            <span>Cuerina en tapices</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="h-2 w-2 bg-primary mt-1 shrink-0" />
+            <span>Adhesivo a base de agua (más seguros para el medio ambiente y para nosotros)</span>
           </li>
         </ul>
       </div>

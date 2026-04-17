@@ -2,11 +2,18 @@
 
 import { motion } from 'framer-motion'
 import { FaWhatsapp } from 'react-icons/fa'
+import { usePathname } from 'next/navigation'
 
 const WHATSAPP_NUMBER = '5491176329579' // Reemplazar con el numero real
 const WHATSAPP_MESSAGE = '¡Hola! Quiero consultar sobre las alfombras de Cosas de Iri'
 
 export function WhatsAppFloat() {
+  const pathname = usePathname()
+
+  if (pathname?.startsWith('/studio')) {
+    return null
+  }
+
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
 
   return (

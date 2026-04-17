@@ -123,7 +123,7 @@ export function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                irinamena98@gmail.com
+                cosasdeiri@gmail.com
               </p>
             </div>
           </div>

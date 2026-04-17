@@ -84,7 +84,7 @@ export function ContactContent() {
           >
             <form
               onSubmit={handleSubmit}
-              action="https://formsubmit.co/irinamena98@gmail.com"
+              action="https://formsubmit.co/cosasdeiri@gmail.com"
               method="POST"
               className="brutal-border brutal-shadow bg-card p-6 md:p-8"
             >
@@ -278,7 +278,7 @@ export function ContactContent() {
               </motion.a>
 
               <motion.a
-                href="mailto:irinamena98@gmail.com"
+                href="mailto:cosasdeiri@gmail.com"
                 whileHover={{ scale: 1.02 }}
                 className="brutal-border brutal-shadow bg-secondary p-4 flex items-center gap-3"
               >
@@ -290,7 +290,7 @@ export function ContactContent() {
                     Email
                   </p>
                   <p className="font-display font-bold text-secondary-foreground">
-                    irinamena98@gmail.com
+                    cosasdeiri@gmail.com
                   </p>
                 </div>
               </motion.a>

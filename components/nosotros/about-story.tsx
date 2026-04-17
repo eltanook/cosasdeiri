@@ -139,14 +139,16 @@ export function AboutStory() {
           </div>
 
           {/* Image with stickers */}
-          <div className="relative">
-            <div className="brutal-border brutal-shadow bg-muted p-2">
-              <div className="relative aspect-[4/3] bg-muted">
+          <div className="relative h-full w-full">
+            <div className="brutal-border brutal-shadow bg-muted p-2 h-full w-full">
+              <div className="relative h-full w-full bg-muted min-h-[300px] lg:min-h-0">
                 <Image
-                  src="/about-workshop.jpg"
-                  alt="Taller de Cosas de Iri donde se crean alfombras artesanales"
+                  src="/about-iri.jpg"
+                  alt="Iri trabajando en una alfombra artesanal"
                   fill
-                  className="object-cover"
+                  priority
+                  className="object-cover object-[center_20%]"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 570px"
                 />
               </div>
             </div>

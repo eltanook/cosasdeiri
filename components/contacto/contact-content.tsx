@@ -37,12 +37,34 @@ export function ContactContent() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/cosasdeiri@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: "Nuevo mensaje desde la web - Cosas de Iri",
+          Nombre: formData.name,
+          Email: formData.email,
+          Teléfono: formData.phone,
+          Tipo: formData.type,
+          Mensaje: formData.message,
+        }),
+      })
 
-    toast.success('Mensaje enviado correctamente! Te respondemos pronto.')
-    setFormData({ name: '', email: '', phone: '', type: '', message: '' })
-    setIsSubmitting(false)
+      if (response.ok) {
+        toast.success('Mensaje enviado correctamente! Te respondemos pronto.')
+        setFormData({ name: '', email: '', phone: '', type: '', message: '' })
+      } else {
+        toast.error('Hubo un error al enviar el mensaje. Por favor intenta nuevamente.')
+      }
+    } catch (error) {
+      toast.error('Hubo un error de conexión al enviar el mensaje.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (

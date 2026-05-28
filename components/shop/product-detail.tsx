@@ -31,12 +31,15 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const currentSize = product.sizes[selectedSize]
 
   const handleAddToCart = () => {
+    const sizeLabel = currentSize?.label || 'Única'
+    const sizePrice = currentSize?.price || product.price || 0
+
     addItem({
-      id: `${product.id}-${currentSize.label}`,
+      id: `${product.id}-${sizeLabel}`,
       name: product.name,
-      price: currentSize.price,
+      price: sizePrice,
       image: product.images[0],
-      size: currentSize.label,
+      size: sizeLabel,
     })
   }
 
@@ -131,15 +134,16 @@ export function ProductDetail({ product }: ProductDetailProps) {
             <div className="brutal-border brutal-shadow bg-primary p-4">
               <div className="flex items-baseline justify-between">
                 <span className="font-display text-4xl font-black text-primary-foreground">
-                  ${currentSize.price.toLocaleString('es-AR')}
+                  ${(currentSize?.price || product.price || 0).toLocaleString('es-AR')}
                 </span>
                 <span className="font-mono text-sm text-primary-foreground/80">
-                  Tamaño {currentSize.label}
+                  Tamaño {currentSize?.label || 'Única'}
                 </span>
               </div>
             </div>
 
             {/* Size Selector */}
+            {product.sizes && product.sizes.length > 0 && (
             <div>
               <h3 className="brutal-border inline-block bg-secondary px-3 py-1 font-mono text-sm font-bold uppercase text-secondary-foreground mb-4">
                 Tamaño
@@ -163,6 +167,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 ))}
               </div>
             </div>
+            )}
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
@@ -216,7 +221,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     <Ruler className="h-4 w-4" />
                     Dimensiones
                   </span>
-                  <span className="font-mono text-sm font-bold">{currentSize.dimensions}</span>
+                  <span className="font-mono text-sm font-bold">{currentSize?.dimensions || 'Estándar'}</span>
                 </div>
                 <div className="flex items-center justify-between px-4 py-3">
                   <span className="flex items-center gap-2 font-mono text-sm text-muted-foreground">

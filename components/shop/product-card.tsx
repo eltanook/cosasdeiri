@@ -23,7 +23,7 @@ export function ProductCard({ product, compact = false }: ProductCardProps) {
       name: product.name,
       price: product.price,
       image: product.images[0],
-      size: product.sizes[0].label,
+      size: product.sizes?.[0]?.label || 'Única',
     })
   }
 
@@ -95,7 +95,7 @@ export function ProductCard({ product, compact = false }: ProductCardProps) {
           <span className={`font-display font-black text-primary ${compact ? 'text-base' : 'text-xl'}`}>
             ${product.price.toLocaleString('es-AR')}
           </span>
-          {!compact && (
+          {!compact && product.sizes?.length > 0 && (
             <span className="brutal-border bg-muted px-2 py-1 font-mono text-xs">
               {product.sizes.length} tamaños
             </span>

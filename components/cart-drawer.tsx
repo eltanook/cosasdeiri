@@ -1,7 +1,8 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, Minus, Plus, Trash2, ShoppingBag, MessageCircle } from 'lucide-react'
+import { X, Minus, Plus, Trash2, ShoppingBag } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
 import Image from 'next/image'
 import { useCart } from '@/lib/cart-store'
 
@@ -157,7 +158,7 @@ export function CartDrawer({ open, onClose }: CartDrawerProps) {
                     whileTap={{ scale: 0.98 }}
                     className="brutal-border brutal-shadow-hover flex w-full items-center justify-center gap-2 bg-lime py-3 font-mono font-bold uppercase text-black"
                   >
-                    <MessageCircle className="h-5 w-5" />
+                    <FaWhatsapp className="h-5 w-5" />
                     Finalizar por WhatsApp
                   </motion.a>
 
